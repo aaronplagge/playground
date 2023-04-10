@@ -35,7 +35,8 @@ def db_query(query: str, query_data: list = []):
     return return_data[0]
 
 def todo_add(todo_item: str):
-    print(f"add: {todo_item}")
+    list_query = f"INSERT INTO todo_list('todo') VALUES('{todo_item}')"
+    db_query(list_query)
 
 def todo_remove(todo_item: str):
     print(f"remove: {todo_item}")
