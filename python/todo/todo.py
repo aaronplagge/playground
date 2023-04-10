@@ -17,8 +17,22 @@ create table todo_list (
 
 """
 
+import sqlite3
+from   argparse import ArgumentParser, REMAINDER
 
-from argparse import ArgumentParser, REMAINDER
+# Global constants
+DBFILE = 'todo.db'
+
+def db_query(query: str, query_data: list = []):
+    dbcon = sqlite3.connect(DBFILE)
+
+    results = dbcon.execute(query, query_data)
+    return_data = results.fetchall()
+
+    dbcon.commit()
+    dbcon.close()
+
+    return return_data[0]
 
 def todo_add(todo_item: str):
     print(f"add: {todo_item}")
@@ -27,7 +41,9 @@ def todo_remove(todo_item: str):
     print(f"remove: {todo_item}")
 
 def todo_list(todo_item: str):
-    print(f"list: {todo_item}")
+    list_query = "SELECT todo from todo_list"
+    todo_items = db_query(list_query)
+    print(todo_items)
 
 def main():
     actions = {"add": todo_add,
