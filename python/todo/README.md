@@ -8,3 +8,4 @@ I could imagin this being a simple cli script which stores information in a DB (
   * Storage - Database
   * Don't think I'll do it as a class yet
   * May end up using a `.todo` file for settings later on.
+  * Will leave arguments as they are for now.  May try adding named arguments with the positional arguments later.
