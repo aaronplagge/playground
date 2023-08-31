@@ -20,3 +20,5 @@ One other node is that for compiling I wanted to enable some warnings to help po
 ```
 g++ -Wall -Wextra -Wpedantic -Wcast-align -Wcast-qual -Wdisabled-optimization -Wduplicated-branches -Wduplicated-cond -Wformat=2 -Wlogical-op -Wmissing-include-dirs -Wnull-dereference -Woverloaded-virtual -Wpointer-arith -Wshadow -Wswitch-enum -Wvla -o out llplay.cpp
 ```
+
+Now I am thinking I should do this and create a binary tree from the random numbers then print out the sorted numbers.  Or maybe a min heap or max heap. 
