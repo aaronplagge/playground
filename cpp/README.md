@@ -1,0 +1,1 @@
+Just some basic information.  Going to High School (think mid 90's) I did have some programming classes.  Basically Fortan and C++.  I had some college classes as well with C++.  While I have not truely forgotten C++ I have not actively used it either so not much better.  So this section of my playground repo will be to hold things that I do in C++ while re-learning it.  
